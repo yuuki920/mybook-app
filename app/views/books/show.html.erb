@@ -1,0 +1,31 @@
+<div class="details-main">
+  <div class="details-main__box">
+    <%= link_to "トップページへ",root_path, class:"link-top" %>
+    <span class="details-main__box--title">
+        本の詳細情報
+    </span>
+    <%= link_to "編集ページへ",edit_book_path, class:"edit-link" %>
+  </div>
+
+  <div class="details-main__infomation">
+    <div class="details-main__infomation--title">
+      タイトル：
+      <%= @book.title %>
+    </div>
+    <div class="details-main__infomation--author">
+      著者：
+      <%= @book.author %>
+    </div>
+    <div class="details-main__infomation--genre">
+      ジャンル：
+      <%= @book.genre %>
+    </div>
+    <div class="details-main__infomation--imagebox">
+      <%= image_tag @book.image.to_s,class:"details-main__infomation--imagebox--image" %>
+    </div>
+    <div class="details-main__infomation--other">
+      <%= safe_join(@book.other.split("\n"),tag(:br)) %>
+    </div>
+  </div>
+</div>
+

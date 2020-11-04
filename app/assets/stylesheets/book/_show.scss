@@ -1,0 +1,64 @@
+.details-main{
+  background-image: url("show.jpg");
+  background-size: cover;
+  height: 100vh;
+  overflow: scroll;
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    &--title{
+      font-size: 30px;
+      text-align: center;
+      font-family: monospace;
+      background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+  }
+  
+  &__infomation{
+    &--title{
+      margin-left: 30%;
+      font-size: 25px;
+      font-weight: bold;
+      color: gold;
+    }
+    &--author{
+      margin-left: 30%;
+      font-size: 25px;
+      font-weight: bold;
+      color: gold;
+      margin-top: 10px;
+    }
+    &--genre{
+      margin-left: 30%;
+      font-size: 25px;
+      font-weight: bold;
+      color: gold;
+      margin-top: 10px;
+    }
+    &--imagebox{
+      text-align: center;
+      &--image{
+        height: auto;
+        width: 300px;
+        margin-top: 10px;
+      }
+    }
+    &--other{
+      font-size: 25px;
+      font-weight: bold;
+      margin-top: 10px;
+      background-color: beige;
+    }
+  }
+}
+
+.edit-link{
+  color: gold;
+  font-size: 25px;
+  margin-bottom: 40px;
+  font-family: monospace;
+}
+

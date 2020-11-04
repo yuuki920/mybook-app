@@ -1,0 +1,47 @@
+.devise-new{
+  background-image: url("devise.jpg");
+  background-size: cover;
+  height: 100vh;
+  overflow: scroll;
+  &__header{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title{
+    font-size: 30px;
+    text-align: center;
+    font-family: monospace;
+    background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+    font-weight: bold;
+  }
+  &__field{
+    color:blue;
+    margin-top: 15px;
+    margin-left: 40px;
+    font-size: 20px;
+  }
+  &__actions{
+   margin-left: 150px;
+   margin-top: 30px;
+   
+   &--submit{
+     height: 40px;
+     width: 70px;
+     font-size: 20px;
+   }
+  }
+}
+
+.login-link{
+  color: gold;
+  font-size: 25px;
+  margin-bottom: 40px;
+  font-family: monospace;
+}
+
+em{
+  color: red;
+  font-weight: bold;
+}

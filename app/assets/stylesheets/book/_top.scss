@@ -1,0 +1,70 @@
+.top {
+  background-image: url("top.jpg");
+  background-size: cover;
+  overflow: scroll;
+  height: 100vh;
+}
+
+.top-header{
+  display: flex;
+  justify-content: space-between;
+  &__title{
+    font-size: 35px;
+    font-family: monospace;
+    background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 50px;
+  }
+  &__user{
+    line-height: 50px;
+    &--nickname{
+      color: blue;
+      font-size: 30px;
+      font-family: monospace;
+    }
+    &--logout{
+      color: gold;
+      font-size: 25px;
+      font-family: monospace;
+    }
+
+    &--login{
+      color: gold;
+      font-size: 25px;
+      font-family: monospace;
+    }
+    &--registration{
+      color: gold;
+      font-size: 25px;
+      font-family: monospace;
+    }
+  }
+}
+
+.top-main{
+  &__newlink{
+    color: gold;
+    font-size: 25px;
+    display: block;
+    margin-bottom: 40px;
+    font-family: monospace;
+    margin-right: 80%;
+  }
+  &__content{
+    margin: 20px;
+    display: inline-flex;
+    font-family: monospace;
+    font-size: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+    color: #07cfe4;
+  }
+}
+
+img{
+  width: 300px;
+  height: auto;
+}

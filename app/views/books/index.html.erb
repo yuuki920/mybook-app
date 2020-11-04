@@ -1,0 +1,31 @@
+<div class="top">
+  <div class="top-header">
+    <span class="top-header__title">
+      My book
+    </span>
+    <div class="top-header__user">
+      <% if user_signed_in? %>
+        <div class="top-header__user--nickname">
+          <%= current_user.nickname %>
+          <%= link_to "ログアウト",destroy_user_session_path, method: :delete, class:"top-header__user--logout" %>
+        </div>
+      <% else %>
+        <%= link_to "ログイン",new_user_session_path, class:"top-header__user--login" %>
+        <%= link_to "新規登録",new_user_registration_path, class:"top-header__user--registration" %>
+      <% end %>
+    </div>
+    <%# <div class="top-search">
+    </div> %>
+  </div>
+  <div class="top-main">
+    <%= link_to "本の新規登録ページへ", new_book_path,{class:"top-main__newlink"} %>
+    <% @books.each do |book| %>
+      <div class="top-main__content">
+        <div class="top-main__content--box">
+          <%= link_to image_tag(book.image.to_s),book_path(book.id) %><br>
+          <%= book.title %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+.edit-main{
+  background-image: url("edit.jpg");
+  background-size: cover;
+  height: 100vh;
+  overflow: scroll;
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    &--title{
+    font-size: 30px;
+    text-align: center;
+    font-family: monospace;
+    background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    }
+  }
+}
+
+.show-link{
+  color: gold;
+  font-size: 25px;
+  margin-bottom: 40px;
+  font-family: monospace;
+}
+
+.delete-link{
+  color: red;
+  font-size: 25px;
+  margin-bottom: 40px;
+  font-family: monospace;
+}

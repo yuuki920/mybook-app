@@ -1,0 +1,46 @@
+<div class="edit-main">
+  <div class="edit-main__box">
+     <%= link_to "詳細ページへ", book_path(@book.id),{class:"show-link"} %>
+    <span class="edit-main__box--title">
+      本の編集
+    </span>
+    <%= link_to "データを削除",book_path(@book.id),method: :delete, class: "delete-link" %>
+  </div>
+
+  <%= form_with(model: @book, local: true) do |f| %>
+      <div class="title-label">
+        <%= f.label :タイトル %>
+        <%= f.text_field :title, class:"title-label--area" %>
+      </div>
+
+      <div class="author-label">
+        <%= f.label :著者 %>
+        <%= f.text_field :author, class: "author-text"%>
+      </div>
+
+      <div class="genre-label">
+        <%= f.label :ジャンル %>
+        <%= f.text_field :genre, class:"genre-text"%>
+      </div>
+
+      <div class="image-label">
+        <%= f.label :画像 %>
+        <%= f.file_field :image %>
+        <p><%=f.check_box :remove_image %>画像を削除する</p>
+      </div>
+
+      <div class= "day-label">
+        <%= f.label :購入日 %>
+        <%= f.date_field :buyday, {class: "day--box"} %>
+      </div>
+
+      <div class= "other-label">
+        <%= f.label :備考 %>
+        <%= f.text_area :other, class:"other-text" %>
+      </div>
+
+      <div class= "submit">
+        <%= f.submit :更新, class:"submit-btn" %>
+      </div>
+  <% end %>
+</div>

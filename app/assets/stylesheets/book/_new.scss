@@ -1,0 +1,90 @@
+.new-main {
+  height: 100vh;
+  background-image: url("new.jpg");
+  background-size: cover;
+}
+
+.new-title {
+  font-size: 30px;
+  text-align: center;
+  font-family: monospace;
+  background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.title-label {
+  color:blue;
+  margin-top: 15px;
+  margin-left: 40px;
+  font-size: 20px;
+}
+
+.author-label {
+  color:blue;
+  margin-left: 40px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.genre-label {
+  color:blue;
+  margin-left: 40px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.image-label {
+  color:blue;
+  margin-left: 40px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.day-label {
+  color:blue;
+  margin-left: 40px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+
+.other-label {
+  color:blue;
+  margin-left: 40px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+   width: 400px;
+   height: 30px;
+}
+
+textarea {
+  height: 300px;
+  width: 50%;
+  resize: none;
+}
+
+.submit{
+  margin-left: 20%;
+  .submit-btn {
+    height: 40px;
+    width: 70px;
+    font-size: 20px;
+  }
+}
+
+label{
+  background: linear-gradient(to right, #2af598 0%, #009efd 100%);
+  font-family: monospace;
+}
+
+.link-top{
+  color: gold;
+  font-size: 25px;
+  margin-bottom: 40px;
+  font-family: monospace;
+}
