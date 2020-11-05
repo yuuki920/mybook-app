@@ -19,7 +19,8 @@
 
     <div class="genre-label">
       <%= f.label :ジャンル %>
-      <%= f.text_field :genre, class:"genre-text"%>
+      <% genre=[["選択してください","選択してください",1],["小説","小説",2],["ライトノベル","ライトノベル",3],["漫画","漫画",4],["資格","資格",5],["ビジネス","ビジネス",6],["その他","その他",7]] %>
+      <%= f.select :genre, genre,selected:1 ,class:"genre-text" %>
     </div>
 
     <div class="image-label">
