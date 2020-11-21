@@ -1,0 +1,12 @@
+<div class="top">
+  <h1> 検索結果 </h1>
+
+    <% @books.each do |book|%>
+      <div class="top-main__content">
+        <div class="top-main__content--box">
+          <%= link_to image_tag(book.image.to_s),book_path(book.id) %><br>
+          <%= book.title %>
+        </div>
+      </div>
+    <% end %>
+</div>
