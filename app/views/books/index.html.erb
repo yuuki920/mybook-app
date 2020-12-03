@@ -3,6 +3,15 @@
     <span class="top-header__title">
       My book
     </span>
+    <div class="top-search">
+      <%= search_form_for(@q, url:search_path) do |s|%>
+        <div class="top-search--content">
+          <%= s.text_field :title_cont, placeholder: "何かお探しですか", class: "form-control"%>
+          <%= s.submit "検索" %>
+        </div>
+      <% end %>
+    </div>
+
     <div class="top-header__user">
       <% if user_signed_in? %>
         <div class="top-header__user--nickname">
@@ -14,19 +23,7 @@
         <%= link_to "新規登録",new_user_registration_path, class:"top-header__user--registration" %>
       <% end %>
     </div>
-    <div class="top-search">
-      <%= search_form_for(@q, url:search_path) do |s|%>
-        <div class="top-search--content">
-          <%= s.text_field :title_cont, placeholder: "何かお探しですか", class: "form-control"%>
-          <%= s.submit "検索" %>
-        </div>
-      <% end %>
-      <%# <% if @search_books.any?%>
-        <%# <% @search_books.each do |result|%> 
-          <%# <%= result.title %>
-        <%# <% end %>
-      <%# <% end %>  
-    </div>
+    
   </div>
   <div class="top-main">
     <%= link_to "本の新規登録ページへ", new_book_path,{class:"top-main__newlink"} %>

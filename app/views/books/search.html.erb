@@ -1,12 +1,26 @@
-<div class="top">
-  <h1> 検索結果 </h1>
-
-    <% @books.each do |book|%>
-      <div class="top-main__content">
-        <div class="top-main__content--box">
-          <%= link_to image_tag(book.image.to_s),book_path(book.id) %><br>
-          <%= book.title %>
+<div class="search-main">
+  <div class="search-main__box">
+    <%= link_to "トップページへ",root_path, class:"link-top" %>
+    <span class="search-main__box--title"> 
+      検索結果 
+    </span>
+    <% if user_signed_in? %>
+        <div class="top-header__user--nickname">
+          <%= current_user.nickname %>
+          <%= link_to "ログアウト",destroy_user_session_path, method: :delete, class:"top-header__user--logout" %>
         </div>
+      <% else %>
+        <%= link_to "ログイン",new_user_session_path, class:"top-header__user--login" %>
+        <%= link_to "新規登録",new_user_registration_path, class:"top-header__user--registration" %>
+      <% end %>
+  </div>
+
+  <% @books.each do |book|%>
+    <div class="top-main__content">
+      <div class="top-main__content--box">
+        <%= link_to image_tag(book.image.to_s),book_path(book.id) %><br>
+        <%= book.title %>
       </div>
-    <% end %>
+    </div>
+  <% end %>
 </div>

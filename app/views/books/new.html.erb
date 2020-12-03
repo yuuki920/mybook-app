@@ -1,10 +1,8 @@
 <div class="new-main">
-
   <h1 class="new-title">
     本の新規登録
   </h1>
-  
-  <%= link_to "トップページへ",root_path, class:"link-top" %>
+   <%= link_to "トップページへ",root_path, class:"link-top" %>
 
   <%= form_with(model: @book, local: true) do |f| %>
     <div class="title-label">
